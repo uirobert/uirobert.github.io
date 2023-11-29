@@ -32,7 +32,7 @@ const Gallery = () => {
 
     return (
         <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-            <div className="relative aspect-[5/2] w-full">
+            <div className="relative aspect-[5/3] w-full">
                 {items.map((item, index) => (
                     <div
                         key={item.src}

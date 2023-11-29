@@ -3,13 +3,15 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Gallery from './Gallery'
 import { Player } from '@lottiefiles/react-lottie-player';
+import Portfolio from './portfolio';
+import CaseStudy from './CaseStudy';
 
 const navigation = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Ask my Bot', href: '#contact' },
   ];
   
 const stats = [
@@ -327,7 +329,7 @@ const  Header = ()  => {
             />
           </div>
           <div className="overflow-hidden">
-            <div className="mx-auto max-w-5xl px-6 pb-28 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+            <div className="mx-auto max-w-3xl px-6 pb-28 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-10 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -344,9 +346,9 @@ const  Header = ()  => {
                 <Player
         src='public/Animation - 1701240931879.json'
         className="player -mt-25"
-        loop
+  loop     
   autoplay
-  style={{ height: '800px', width: '300px' }}
+  style={{ height: '600px', width: '200px' }}
       />
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
        
@@ -362,6 +364,8 @@ const  Header = ()  => {
           </div>
         </div>
 
+
+    
         {/* Content section */}
     <section id="about">
 
@@ -376,6 +380,7 @@ const  Header = ()  => {
                  unsupervised machine learning, deep learning, and natural language processing into my work. 
                  
                 </div>
+
                 <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
                   <p>
                   My extensive background in UI product management bridges the gap between technology and user experience,
@@ -405,6 +410,15 @@ const  Header = ()  => {
         </div>
         </section>
 
+
+      
+         {/* Image section */}
+    
+
+          {/* <div className="mt-22 sm:mt-30 xl:mx-auto xl:max-w-4xl xl:px-4">
+         <iframe class="w-full aspect-video " src="https://res.cloudinary.com/dsvkyacza/video/upload/v1490664798/Broadway_wxav9s.webm" autoplay></iframe>
+        </div>   */}
+   
         {/* Testimonial section */}
         <section id="skills">
             <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -427,14 +441,7 @@ const  Header = ()  => {
         </section>
     
 
-        {/* Image section */}
-        {/* <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-          <img
-            src="public/profile.jpeg"
-            alt=""
-            className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
-          />
-        </div> */}
+     
 
         {/* portfolio section */}
         <section id="projects">
@@ -450,6 +457,7 @@ const  Header = ()  => {
 
             </p>
             <Gallery/>
+    
           </div>
           <ul
             role="list"
@@ -465,6 +473,8 @@ const  Header = ()  => {
           </ul>
         </div>
         <section/>
+
+
 
         {/* Logo cloud */}
         <div className="relative isolate -z-10 mt-32 sm:mt-48">
@@ -534,7 +544,7 @@ const  Header = ()  => {
         </div>
 
  
-     
+       
 
         {/* Blog section */}
         <section id="blog"></section>
