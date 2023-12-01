@@ -6,7 +6,7 @@ const Gallery = () => {
     const items = [
         // Replace with your actual items
         { type: 'image', src: 'https://via.placeholder.com/600x400.png?text=Image+1', link: null },
-        { type: 'image', src: 'https://via.placeholder.com/600x400.png?text=Image+2', link: 'https://example.com' },
+        { type: 'image', src: 'https://via.placeholder.com/600x400.png?text=Image+2', link: '/projects' },
         // ... more items ...
     ];
 

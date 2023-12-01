@@ -3,13 +3,13 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Gallery from './Gallery'
 import { Player } from '@lottiefiles/react-lottie-player';
-import Portfolio from './portfolio';
+// import Portfolio from './portfolio';
 import CaseStudy from './CaseStudy';
 
 const navigation = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Projects', href: '/projects' },
     { name: 'Blog', href: '#blog' },
     { name: 'Ask my Bot', href: '#contact' },
   ];
@@ -67,31 +67,31 @@ const values = [
   },
 ]
 const team = [
-  {
-    name: 'MLB Players App',
-    role: 'Co-Founder / CTO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
-  {
-    name: 'E-Trade',
-    role: 'Co-Founder / CTO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
-  {
-    name: 'TourZop- Side Project',
-    role: 'Co-Founder / CTO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
+//   {
+//     name: 'MLB Players App',
+//     role: 'Co-Founder / CTO',
+//     imageUrl:
+//       'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+//   },
+//   {
+//     name: 'E-Trade',
+//     role: 'Co-Founder / CTO',
+//     imageUrl:
+//       'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+//   },
+//   {
+//     name: 'TourZop- Side Project',
+//     role: 'Co-Founder / CTO',
+//     imageUrl:
+//       'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+//   },
 
-{
-  name: 'TourZop- Side Project',
-  role: 'Co-Founder / CTO',
-  imageUrl:
-    'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-},
+// {
+//   name: 'TourZop- Side Project',
+//   role: 'Co-Founder / CTO',
+//   imageUrl:
+//     'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+// },
   // More people...
 ]
 const blogPosts = [
@@ -448,15 +448,16 @@ const  Header = ()  => {
             {/* Your code for the projects section goes here */}
         </section>
 
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
+        <div className="mx-auto mt-32 max-w-7xl px-3 sm:mt-28 lg:px-4">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Case Studies and Artificats</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Projects and Artificats</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
             I'm sharing what can be shared from some of my projects. Please note that my current role at Bank of
              America does not allow me to share project details. Additionaly previous Non-Disclosure Agreements (NDAs) from previous employers and clients, limiting what I can share.
 
             </p>
-            <Gallery/>
+       
+            <CaseStudy/>
     
           </div>
           <ul
@@ -501,9 +502,9 @@ const  Header = ()  => {
           </div>
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
-            {/* Trusted by Global Corporations and Startups Alike */}
+            Provided value for both Large and Startups companies
             </h2>
-            {/* <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            /* <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
               <img
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
@@ -539,7 +540,7 @@ const  Header = ()  => {
                 width={158}
                 height={48}
               />
-            </div> */}
+            </div> 
           </div>
         </div>
 

@@ -1,0 +1,7 @@
+/* GreenTechPresentation.css */
+.reveal-container {
+    height: 600px; /* Fixed height for the presentation container */
+    width: 100%; /* Full width */
+    overflow-y: auto; /* Enable vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+  }
