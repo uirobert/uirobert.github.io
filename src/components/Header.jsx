@@ -3,16 +3,19 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Gallery from './Gallery'
 import { Player } from '@lottiefiles/react-lottie-player';
+import ImageGallery2 from '../components/ImageGallery2'
 // import Portfolio from './portfolio';
 import CaseStudy from './CaseStudy';
 
 const navigation = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '/projects' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Blog', href: '#blog' },
     { name: 'Ask my Bot', href: '#contact' },
   ];
+
+  
   
 const stats = [
   { label: ' Startup and Large Organization Experience', value: 'Product Manager & Engineer' },
@@ -186,6 +189,64 @@ const footerNavigation = {
   ],
 }
 
+
+const data = [
+    {
+      id: 1,
+      title: "Revolutionizing E-Commerce",
+      description: "An in-depth look into how we enhanced the online shopping experience, increasing customer retention by 40%.",
+      imageUrl: "https://via.placeholder.com/300/09f/fff.png"
+    },
+    {
+      id: 2,
+      title: "AI in Healthcare",
+      description: "Exploring the integration of AI in medical diagnostics, significantly reducing diagnosis time and improving accuracy.",
+      imageUrl: "https://via.placeholder.com/300/db7093/fff.png"
+    },
+    {
+      id: 3,
+      title: "Educational App Redesign",
+      description: "A case study on redesigning an educational app to enhance user engagement and learning outcomes.",
+      imageUrl: "https://via.placeholder.com/300/8A2BE2/fff.png"
+    },
+    {
+      id: 4,
+      title: "FinTech Innovation",
+      description: "How our solutions modernized financial transactions, ensuring secure and swift user experiences.",
+      imageUrl: "https://via.placeholder.com/300/FF6347/fff.png"
+    }
+    // Add more case studies as needed
+  ];
+  
+
+  // CaseStudies.js
+const CaseStudies = ({ data }) => {
+    return (
+      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {data.map((item) => (
+            <div key={item.id} className="bg-white shadow overflow-hidden sm:rounded-lg">
+              <div className="px-4 py-5 sm:px-6">
+              <div>
+                <img src={item.imageUrl} alt={item.title} className="w-full object-cover h-48 sm:h-72" />
+              </div>
+                <h3 className="text-2xl text-bold leading-6 font-medium text-gray-900">{item.title}</h3>
+                <p className="mt-1 max-w-2xl text-sm text-gray-500">{item.description}</p>
+              </div>
+            
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+  
+ 
+
+
+
+
+
 const  Header = ()  => {
  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -283,10 +344,15 @@ const  Header = ()  => {
                
                   </a>
                 </div>
+
+
+
+                
               </div>
             </div>
           </Dialog.Panel>
         </Dialog>
+
       </header>
 
       <main className="isolate">
@@ -452,12 +518,11 @@ const  Header = ()  => {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Projects and Artificats</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-            I'm sharing what can be shared from some of my projects. Please note that my current role at Bank of
-             America does not allow me to share project details. Additionaly previous Non-Disclosure Agreements (NDAs) from previous employers and clients, limiting what I can share.
+            I'm sharing what can be shared from some of my projects. Additionaly previous Non-Disclosure Agreements (NDAs) from previous employers and clients, limiting what I can share.
 
             </p>
        
-            <CaseStudy/>
+            <CaseStudies data={data}/>
     
           </div>
           <ul
@@ -475,7 +540,7 @@ const  Header = ()  => {
         </div>
         <section/>
 
-
+  
 
         {/* Logo cloud */}
         <div className="relative isolate -z-10 mt-32 sm:mt-48">
@@ -484,8 +549,8 @@ const  Header = ()  => {
               <defs>
                 <pattern
                   id="e9033f3e-f665-41a6-84ef-756f6778e6fe"
-                  width={200}
-                  height={200}
+                  width={300}
+                  height={300}
                   x="50%"
                   y="50%"
                   patternUnits="userSpaceOnUse"
@@ -504,7 +569,7 @@ const  Header = ()  => {
             <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
             Provided value for both Large and Startups companies
             </h2>
-            /* <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+      <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
               <img
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
