@@ -274,7 +274,7 @@ const  Header2 = ()  => {
               <span className="sr-only">Your Company</span>
               <img
         className="inline-block h-20 w-20 rounded-full"
-        src="public/profile.jpeg"
+        src="/profile.jpeg"
         alt=""
       />
             </a>
@@ -315,7 +315,7 @@ const  Header2 = ()  => {
                 <span className="sr-only">Your Company</span>
                 <img
         className="inline-block h-14 w-14 rounded-full"
-        src="public/profile.jpeg"
+        src="/profile.jpeg"
         alt=""
       />
               </a>
