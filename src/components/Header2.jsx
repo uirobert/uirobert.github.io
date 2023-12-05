@@ -187,50 +187,62 @@ const MainSection = () => {
   
 
 
-  const data = [
+  // Updated data array with five dummy case studies
+const data = [
     {
       id: 1,
       title: "Revolutionizing E-Commerce",
       description: "An in-depth look into how we enhanced the online shopping experience, increasing customer retention by 40%.",
-      imageUrl: "https://via.placeholder.com/300/09f/fff.png"
+      imageUrl: "https://via.placeholder.com/300/09f/fff.png",
+      caseStudyUrl: "#"
     },
     {
       id: 2,
       title: "AI in Healthcare",
       description: "Exploring the integration of AI in medical diagnostics, significantly reducing diagnosis time and improving accuracy.",
-      imageUrl: "https://via.placeholder.com/500/db7093/fff.png"
+      imageUrl: "https://via.placeholder.com/300/db7093/fff.png",
+      caseStudyUrl: "#"
     },
     {
       id: 3,
       title: "Educational App Redesign",
       description: "A case study on redesigning an educational app to enhance user engagement and learning outcomes.",
-      imageUrl: "https://via.placeholder.com/500/8A2BE2/fff.png"
+      imageUrl: "https://via.placeholder.com/300/8A2BE2/fff.png",
+      caseStudyUrl: "#"
     },
     {
       id: 4,
       title: "FinTech Innovation",
       description: "How our solutions modernized financial transactions, ensuring secure and swift user experiences.",
-      imageUrl: "https://via.placeholder.com/500/FF6347/fff.png"
+      imageUrl: "https://via.placeholder.com/300/FF6347/fff.png",
+      caseStudyUrl: "#"
+    },
+    {
+      id: 5,
+      title: "Sustainable Energy Systems",
+      description: "Detailing our approach to creating more efficient and sustainable energy systems for the future.",
+      imageUrl: "https://via.placeholder.com/300/32CD32/fff.png",
+      caseStudyUrl: "#"
     }
-    // Add more case studies as needed
   ];
   
+  
 
-  // CaseStudies.js
   const CaseStudies = ({ data }) => {
     return (
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {data.map((item) => (
-            <div key={item.id} className="bg-white shadow overflow-hidden sm:rounded-lg">
-              <div className="px-4 py-5 sm:px-6">
-                <img src={item.imageUrl} alt={item.title} className="w-full object-cover h-48 sm:h-72 mb-4" />
-                <h3 className="text-2xl font-bold leading-6 text-gray-900">{item.title}</h3>
-                <p className="mt-1 max-w-2xl text-sm text-gray-500">{item.description}</p>
-              </div>
+      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1360px' }}>
+        {data.map((item) => (
+          <div key={item.id} className="flex flex-wrap mb-8 shadow overflow-hidden sm:rounded-lg" style={{ height: '610px' }}>
+            <div className="w-full lg:w-1/2">
+              <img src={item.imageUrl} alt={item.title} className="h-full w-full object-cover" />
             </div>
-          ))}
-        </div>
+            <div className="w-full lg:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold leading-6 text-gray-900">{item.title}</h3>
+              <p className="mt-4 text-sm text-gray-500">{item.description}</p>
+              <a href={item.caseStudyUrl} className="mt-4 text-indigo-600 hover:text-indigo-900">View Case Study</a>
+            </div>
+          </div>
+        ))}
       </div>
     );
   };

@@ -195,53 +195,53 @@ const data = [
       id: 1,
       title: "Revolutionizing E-Commerce",
       description: "An in-depth look into how we enhanced the online shopping experience, increasing customer retention by 40%.",
-      imageUrl: "https://via.placeholder.com/300/09f/fff.png"
+      imageUrl: "https://via.placeholder.com/300/09f/fff.png",
+      caseStudyUrl: "/mlb"
     },
     {
       id: 2,
       title: "AI in Healthcare",
       description: "Exploring the integration of AI in medical diagnostics, significantly reducing diagnosis time and improving accuracy.",
-      imageUrl: "https://via.placeholder.com/300/db7093/fff.png"
+      imageUrl: "https://via.placeholder.com/300/db7093/fff.png",
+      caseStudyUrl: "https://www.google.com"
     },
     {
       id: 3,
       title: "Educational App Redesign",
       description: "A case study on redesigning an educational app to enhance user engagement and learning outcomes.",
-      imageUrl: "https://via.placeholder.com/300/8A2BE2/fff.png"
+      imageUrl: "https://via.placeholder.com/300/8A2BE2/fff.png",
+      caseStudyUrl: "https://www.google.com"
     },
     {
       id: 4,
       title: "FinTech Innovation",
       description: "How our solutions modernized financial transactions, ensuring secure and swift user experiences.",
-      imageUrl: "https://via.placeholder.com/300/FF6347/fff.png"
+      imageUrl: "https://via.placeholder.com/300/FF6347/fff.png",
+      caseStudyUrl: "https://www.google.com"
     }
     // Add more case studies as needed
   ];
   
 
   // CaseStudies.js
-const CaseStudies = ({ data }) => {
+  const CaseStudies = ({ data }) => {
     return (
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {data.map((item) => (
-            <div key={item.id} className="bg-white shadow overflow-hidden sm:rounded-lg">
-              <div className="px-4 py-5 sm:px-6">
-              <div>
-                <img src={item.imageUrl} alt={item.title} className="w-full object-cover h-48 sm:h-72" />
-              </div>
-                <h3 className="text-2xl text-bold leading-6 font-medium text-gray-900">{item.title}</h3>
-                <p className="mt-1 max-w-2xl text-sm text-gray-500">{item.description}</p>
-              </div>
-            
+      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1360px' }}>
+        {data.map((item) => (
+          <div key={item.id} className="flex flex-wrap mb-8 shadow overflow-hidden sm:rounded-lg" style={{ height: '610px' }}>
+            <div className="w-full lg:w-1/2">
+              <img src={item.imageUrl} alt={item.title} className="h-full w-full object-cover" />
             </div>
-          ))}
-        </div>
+            <div className="w-full lg:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold leading-6 text-gray-900">{item.title}</h3>
+              <p className="mt-4 text-sm text-gray-500">{item.description}</p>
+              <a href={item.caseStudyUrl} className="mt-4 text-indigo-600 hover:text-indigo-900">View Case Study</a>
+            </div>
+          </div>
+        ))}
       </div>
     );
   };
-  
- 
 
 
 
@@ -267,11 +267,13 @@ const  Header = ()  => {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
+          <a href="/">
               <img
         className="inline-block h-20 w-20 rounded-full"
         src="public/profile.jpeg"
-        alt=""
+        alt="profile"
       />
+            </a>
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -308,11 +310,13 @@ const  Header = ()  => {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
+              <a href="/"> 
                 <img
         className="inline-block h-14 w-14 rounded-full"
         src="public/profile.jpeg"
-        alt=""
+        alt="profile"
       />
+             </a> 
               </a>
               <button
                 type="button"
