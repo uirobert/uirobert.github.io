@@ -20,12 +20,19 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         # with:
           # path: . # The root location of your Astro project inside the repository. (optional)
           # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
           # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+      
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: dist # This is the default build directory for Astro.js projects
 
   deploy:
     needs: build
@@ -34,6 +41,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v3
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifact
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
