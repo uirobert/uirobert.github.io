@@ -414,7 +414,7 @@ const  Header = ()  => {
                 </div>
                 <div className="mt-8 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                 <Player
-        src='public/Animation - 1701240931879.json'
+        src='/Animation - 1701240931879.json'
         className="player -mt-25"
   loop     
   autoplay
