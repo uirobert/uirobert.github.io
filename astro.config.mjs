@@ -8,8 +8,8 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://robertromulus.github.io',
-  base: 'https://github.com/uirobert/portfolio',
+  site: 'uirobert.github.io',
+  base: 'https://github.com/uirobert/uirobert.github.io',
   integrations: [tailwind(), react(), mdx()],
   output: "server",
   adapter: cloudflare()
