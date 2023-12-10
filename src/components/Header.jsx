@@ -193,8 +193,8 @@ const footerNavigation = {
 const data = [
     {
       id: 1,
-      title: "Revolutionizing E-Commerce",
-      description: "An in-depth look into how we enhanced the online shopping experience, increasing customer retention by 40%.",
+      title: "MLB Players app",
+      description: "New user experiecne, maintaining API functionality, updating and maintaining the previous app version, ensuring data integrity during migration, and managing user transition.",
       imageUrl: "https://via.placeholder.com/300/09f/fff.png",
       caseStudyUrl: "/mlb"
     },
