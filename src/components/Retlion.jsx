@@ -1,7 +1,7 @@
 import { ExternalLinkIcon } from '@heroicons/react/20/solid';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid';
 
-export default function MLB() {
+export default function Rentlion() {
   return (
 
    
@@ -13,7 +13,7 @@ export default function MLB() {
 
       <div className="bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
     <div className="mx-auto max-w-2xl text-center">
-      <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">MLB Players App</h2>
+      <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">RentLion</h2>
       <p className="mt-6 text-lg leading-8 text-gray-300">
       MLBPA App- The App that MLB players use to check on their benefits, contracts, and even dispute previous plays.
       </p>

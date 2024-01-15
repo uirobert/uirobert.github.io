@@ -265,7 +265,7 @@ const  Header3 = ()  => {
               <span className="sr-only">Your Company</span>
               <img
         className="inline-block h-20 w-20 rounded-full"
-        src="/profile.jpeg"
+        // src="/profile.jpeg"
         alt=""
       />
             </a>

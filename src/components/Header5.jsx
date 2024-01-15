@@ -3,14 +3,15 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Gallery from './Gallery'
 import { Player } from '@lottiefiles/react-lottie-player';
+import PDFTALK from './PDFTALK';
 
 
 const navigation = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Ask my Bot', href: '#contact' },
+    { name: 'Back to Main Site', href: '/' },
+    // { name: 'Skills', href: '#skills' },
+    // { name: 'Projects', href: '#projects' },
+    // { name: 'Blog', href: '#blog' },
+    // { name: 'Ask my Bot', href: '#contact' },
   ];
   
   const items = [
@@ -187,62 +188,53 @@ const MainSection = () => {
   
 
 
-  // Updated data array with five dummy case studies
-const data = [
+  const data = [
     {
       id: 1,
       title: "Revolutionizing E-Commerce",
       description: "An in-depth look into how we enhanced the online shopping experience, increasing customer retention by 40%.",
-      imageUrl: "https://via.placeholder.com/300/09f/fff.png",
-      caseStudyUrl: "#"
+      imageUrl: "https://via.placeholder.com/300/09f/fff.png"
     },
     {
       id: 2,
       title: "AI in Healthcare",
       description: "Exploring the integration of AI in medical diagnostics, significantly reducing diagnosis time and improving accuracy.",
-      imageUrl: "https://via.placeholder.com/300/db7093/fff.png",
-      caseStudyUrl: "#"
+      imageUrl: "https://via.placeholder.com/300/db7093/fff.png"
     },
     {
       id: 3,
       title: "Educational App Redesign",
       description: "A case study on redesigning an educational app to enhance user engagement and learning outcomes.",
-      imageUrl: "https://via.placeholder.com/300/8A2BE2/fff.png",
-      caseStudyUrl: "#"
+      imageUrl: "https://via.placeholder.com/300/8A2BE2/fff.png"
     },
     {
       id: 4,
       title: "FinTech Innovation",
       description: "How our solutions modernized financial transactions, ensuring secure and swift user experiences.",
-      imageUrl: "https://via.placeholder.com/300/FF6347/fff.png",
-      caseStudyUrl: "#"
-    },
-    {
-      id: 5,
-      title: "Sustainable Energy Systems",
-      description: "Detailing our approach to creating more efficient and sustainable energy systems for the future.",
-      imageUrl: "https://via.placeholder.com/300/32CD32/fff.png",
-      caseStudyUrl: "#"
+      imageUrl: "https://via.placeholder.com/300/FF6347/fff.png"
     }
+    // Add more case studies as needed
   ];
   
-  
 
-  const CaseStudies = ({ data }) => {
+  // CaseStudies.js
+const CaseStudies = ({ data }) => {
     return (
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1360px' }}>
-        {data.map((item) => (
-          <div key={item.id} className="flex flex-wrap mb-8 shadow overflow-hidden sm:rounded-lg" style={{ height: '610px' }}>
-            <div className="w-full lg:w-1/2">
-              <img src={item.imageUrl} alt={item.title} className="h-full w-full object-cover" />
+      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {data.map((item) => (
+            <div key={item.id} className="bg-white shadow overflow-hidden sm:rounded-lg">
+              <div className="px-4 py-5 sm:px-6">
+              <div>
+                <img src={item.imageUrl} alt={item.title} className="w-full object-cover h-48 sm:h-72" />
+              </div>
+                <h3 className="text-2xl text-bold leading-6 font-medium text-gray-900">{item.title}</h3>
+                <p className="mt-1 max-w-2xl text-sm text-gray-500">{item.description}</p>
+              </div>
+            
             </div>
-            <div className="w-full lg:w-1/2 p-8 flex flex-col justify-center">
-              <h3 className="text-2xl font-bold leading-6 text-gray-900">{item.title}</h3>
-              <p className="mt-4 text-sm text-gray-500">{item.description}</p>
-              <a href={item.caseStudyUrl} className="mt-4 text-indigo-600 hover:text-indigo-900">View Case Study</a>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     );
   };
@@ -252,7 +244,7 @@ const data = [
  
   
 
-const  Header2 = ()  => {
+const  Header4 = ()  => {
  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Smooth scroll handler
@@ -270,11 +262,11 @@ const  Header2 = ()  => {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
         className="inline-block h-20 w-20 rounded-full"
-        // src="/profile.jpeg"
+        src="/profile.jpeg"
         alt=""
       />
             </a>
@@ -311,7 +303,7 @@ const  Header2 = ()  => {
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
         className="inline-block h-14 w-14 rounded-full"
@@ -382,8 +374,9 @@ const  Header2 = ()  => {
     </div>
 
    
-    <MainSection/>
-    <CaseStudies data={data} />
+    {/* <MainSection/>
+    <CaseStudies data={data} /> */}
+  <PDFTALK/>
 
 
       </div>
@@ -451,4 +444,4 @@ const  Header2 = ()  => {
 
 
 
-export default Header2;
+export default Header4;
