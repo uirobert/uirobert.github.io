@@ -7,14 +7,24 @@ import PDFTALK from './PDFTALK';
 
 
 
-const contactLink = 'https://calendly.com/robertromulus';
 
+function navigateToRoot() {
+  window.location.href = '/';
+}
 
- const navigation = [
-  { name: 'Home', text: 'Back to Main Site', href: '/' },
-  { name: 'Skills', href: '/#skills' },
-  { name: 'Projects', href: '/#projects' },
-  { name: 'Contact', href: contactLink },
+function navigateToSkills() {
+  window.location.href = '/#skills';
+}
+
+function navigateToProjects() {
+  window.location.href = '/#projects';
+}
+
+const navigation = [
+  { name: 'Home', text: 'Back to Main Site', onclick: navigateToRoot },
+  { name: 'Skills', onclick: navigateToSkills },
+  { name: 'Projects', onclick: navigateToProjects },
+  { name: 'Contact', onclick: () => openExternalLink('https://calendly.com/robertromulus') },
 ];
   
   const items = [
