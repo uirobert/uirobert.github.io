@@ -7,13 +7,15 @@ import PDFTALK from './PDFTALK';
 
 
 
+const contactLink = 'https://calendly.com/robertromulus';
 
-const navigation = [
+
+ const navigation = [
   { name: 'Home', text: 'Back to Main Site', href: '/' },
-   { name: 'Skills', href: '#skills' },
-   { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: 'https://calendly.com/robertromulus' },
-  ];
+  { name: 'Skills', href: '/#skills' },
+  { name: 'Projects', href: '/#projects' },
+  { name: 'Contact', href: contactLink },
+];
   
   const items = [
     { id: 1 },
