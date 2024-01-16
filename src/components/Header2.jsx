@@ -6,11 +6,10 @@ import { Player } from '@lottiefiles/react-lottie-player';
 
 
 const navigation = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Ask my Bot', href: '#contact' },
+  { name: 'Home', text: 'Back to Main Site', href: '/' },
+   { name: 'Skills', href: '#skills' },
+   { name: 'Projects', href: '#projects' },
+   { name: 'Contact', href: 'https://calendly.com/robertromulus' },
   ];
   
   const items = [

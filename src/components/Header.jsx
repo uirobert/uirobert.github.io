@@ -8,11 +8,10 @@ import ImageGallery2 from '../components/ImageGallery2'
 import CaseStudy from './CaseStudy';
 
 const navigation = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    // { name: 'Blog', href: '#blog' },
-    // { name: 'AI Roberto Newsletter', href: '#contact' },
+  { name: 'Home', text: 'Back to Main Site', href: '/' },
+   { name: 'Skills', href: '#skills' },
+   { name: 'Projects', href: '#projects' },
+   { name: 'Contact', href: 'https://calendly.com/robertromulus' },
   ];
 
   
@@ -385,11 +384,7 @@ const  Header = ()  => {
                   </h1>
                   <p className="relative mt-2 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
                   
-My diverse skill set uniquely positions me to understand and appreciate technical 
-feasibility, strategic planning, documentation, engineering, data analytics, UX design,
- and AI in the tech world. With a background in engineering, I craft visionary yet practical 
- strategies and roadmaps, ensuring alignment with both technical feasibility and strategic goals. My expertise in AI, including open-source ML and ML operations, makes me a true
- AI product manager, driving innovation and success in this dynamic field.
+My diverse skill set uniquely positions me to truly understand and appreciate technical feasibility, strategic planning, documentation, engineering, data analytics, UX design, and AI in the tech world. With a background in engineering, I craft visionary yet practical strategies and roadmaps, ensuring alignment with technical feasibility and strategic goals. My expertise in AI, including open-source ML and ML operations, makes me an exceptional AI product manager, driving innovation and success in this dynamic field.
 
                   </p>
                 </div>

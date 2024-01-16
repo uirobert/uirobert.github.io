@@ -6,12 +6,13 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import PDFTALK from './PDFTALK';
 
 
+
+
 const navigation = [
-    { name: 'Back to Main Site', href: 'http://localhost:4321' },
-    // { name: 'Skills', href: '#skills' },
-    // { name: 'Projects', href: '#projects' },
-    // { name: 'Blog', href: '#blog' },
-    // { name: 'Ask my Bot', href: '#contact' },
+  { name: 'Home', text: 'Back to Main Site', href: '/' },
+   { name: 'Skills', href: '#skills' },
+   { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: 'https://calendly.com/robertromulus' },
   ];
   
   const items = [
