@@ -187,7 +187,7 @@ const data = [
       id: 3,
       title: "PDF Master - Side Project",
       description: "A prototype that leverages Python and the ChatGPT API to demonstrate conversational AI capabilities, allowing users to ask questions and receive informative responses through an intuitive interface.",
-      imageUrl: "public/pdfimage.png",
+      imageUrl: "https://github.com/uirobert/portfolio/blob/efb66fce8b335925c26d32615a29918e4c3f530e/public/pdfimage.png",
       caseStudyUrl: "/pdf"
     },
     // {
@@ -204,7 +204,7 @@ const data = [
   // CaseStudies.js
   const CaseStudies = ({ data }) => {
     return (
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1360px' }}>
+      <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1360px' }}>
         {data.map((item) => (
           <div key={item.id} className="flex flex-wrap mb-8 shadow overflow-hidden sm:rounded-lg" style={{ height: '610px' }}>
             <div className="w-full lg:w-1/2">
@@ -247,7 +247,7 @@ const  Header = ()  => {
               <span className="sr-only">Your Company</span>
           <a href="/">
               <img
-        className="inline-block h-20 w-20 rounded-full"
+        className="inline-block h-20 w-20 rounded-full bg-white"
         src="/profile.jpeg"
         alt="profile"
       />
@@ -356,7 +356,7 @@ const  Header = ()  => {
                 <path d="M.5 200V.5H200" fill="none" />
               </pattern>
             </defs>
-            <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
+            <svg x="50%" y={-1} className="overflow-visible fill-white">
               <path
                 d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
                 strokeWidth={0}
@@ -380,7 +380,7 @@ const  Header = ()  => {
             <div className="mx-auto max-w-2xl px-6 pb-18 pt-26 sm:pt-40 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-10 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl p-10" >
                   Unlocking Innovation at the Intersection of AI and Product Management
                   </h1>
                   <p className="relative mt-2 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
@@ -419,7 +419,7 @@ const  Header = ()  => {
 
         <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A bit about me</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt- p-5">A bit about me</h2>
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
               <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
@@ -496,7 +496,7 @@ const  Header = ()  => {
             {/* Your code for the projects section goes here */}
         </section>
 
-        <div className="mx-auto mt-32 max-w-7xl px-3 sm:mt-28 lg:px-4">
+        <div className="mx-auto mt-10 max-w-7xl px-3 sm:mt-28 lg:px-4">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Projects and Artificats</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -525,7 +525,7 @@ const  Header = ()  => {
   
 
         {/* Logo cloud */}
-        <div className="relative isolate -z-10 mt-32 sm:mt-48">
+        {/* <div className="relative isolate -z-10 mt-32 sm:mt-48">
           <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
             <svg className="h-[40rem] w-[80rem] flex-none stroke-gray-200" aria-hidden="true">
               <defs>
@@ -546,14 +546,14 @@ const  Header = ()  => {
               </svg>
               <rect width="100%" height="100%" strokeWidth={0} fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)" />
             </svg>
-          </div>
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          </div> */}
+          {/* <div className="mx-auto max-w-7xl px-6 lg:px-8"> */}
             {/* <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
             Provided value for both Large and Startups companies
             </h2> */}
 
             
-      <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+      {/* <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"> */}
               {/* <img
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
@@ -589,9 +589,9 @@ const  Header = ()  => {
                 width={158}
                 height={48}
               /> */}
-            </div> 
+            {/* </div> 
           </div>
-        </div>
+        </div> */}
 
  
        
@@ -606,44 +606,14 @@ const  Header = ()  => {
             </p> */}
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {blogPosts.map((post) => (
-              <article
-                key={post.id}
-                className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-              >
-                {/* <img src={post.imageUrl} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" /> */}
-                {/* <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" /> */}
-                {/* <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" /> */}
-
-                <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                  <time dateTime={post.datetime} className="mr-8">
-                    {/* {post.date} */}
-                  </time>
-                  <div className="-ml-4 flex items-center gap-x-4">
-                    {/* <svg viewBox="0 0 2 2" className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
-                      <circle cx={1} cy={1} r={1} />
-                    </svg> */}
-                    <div className="flex gap-x-2.5">
-                      {/* <img src={post.author.imageUrl} alt="" className="h-6 w-6 flex-none rounded-full bg-white/10" /> */}
-                      {/* {post.author.name} */}
-                    </div>
-                  </div>
-                </div>
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                  <a href={post.href}>
-                    <span className="absolute inset-0" />
-                    {/* {post.title} */}
-                  </a>
-                </h3>
-              </article>
-            ))}
+           
           </div>
         </div>
         <section/>
       </main>
 
       {/* Footer */}
-      <footer className="mx-auto mt-40 max-w-7xl overflow-hidden px-6 pb-20 sm:mt-64 sm:pb-24 lg:px-8">
+      <footer className="mx-auto mt-10 max-w-7xl overflow-hidden px-6 pb-20 sm:mt-64 sm:pb-24 lg:px-8">
         <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
           {footerNavigation.main.map((item) => (
             <div key={item.name} className="pb-6">
