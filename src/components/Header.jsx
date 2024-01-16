@@ -9,7 +9,7 @@ import CaseStudy from './CaseStudy';
 import { Link } from 'astro-link';
 
 
-const Navigation = () => {
+
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Skills', href: '/#skills' },
@@ -17,7 +17,7 @@ const Navigation = () => {
     { name: 'Contact', href: 'https://calendly.com/robertromulus' },
   ];
 
-}
+
 
   
   
@@ -269,7 +269,7 @@ const  Header = ()  => {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-          {Navigation.map((item) => (
+          {navigation.map((item) => (
               <Link key={item.name}
                 href={item.href}
                 onClick={(e) => handleScroll(e, item.href)}

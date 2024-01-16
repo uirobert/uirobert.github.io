@@ -4,24 +4,14 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Gallery from './Gallery'
 import { Player } from '@lottiefiles/react-lottie-player';
 
-function navigateToRoot() {
-  window.location.href = '/';
-}
 
-function navigateToSkills() {
-  window.location.href = '/#skills';
-}
 
-function navigateToProjects() {
-  window.location.href = '/#projects';
-}
-
-const navigation = [
-  { name: 'Home', text: 'Back to Main Site', onclick: navigateToRoot },
-  { name: 'Skills', onclick: navigateToSkills },
-  { name: 'Projects', onclick: navigateToProjects },
-  { name: 'Contact', onclick: () => openExternalLink('https://calendly.com/robertromulus') },
-];
+ const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Skills', href: '/#skills' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Contact', href: 'https://calendly.com/robertromulus' },
+  ];
   
   const items = [
     { id: 1 },
