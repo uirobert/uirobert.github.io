@@ -7,7 +7,7 @@ import PDFTALK from './PDFTALK';
 
 
 const navigation = [
-    { name: 'Back to Main Site', href: '/' },
+    { name: 'Back to Main Site', href: 'http://localhost:4321' },
     // { name: 'Skills', href: '#skills' },
     // { name: 'Projects', href: '#projects' },
     // { name: 'Blog', href: '#blog' },
