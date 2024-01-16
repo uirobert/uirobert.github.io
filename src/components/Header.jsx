@@ -270,13 +270,13 @@ const  Header = ()  => {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-              <Link key={item.name}
+              <a key={item.name}
                 href={item.href}
                 onClick={(e) => handleScroll(e, item.href)}
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
