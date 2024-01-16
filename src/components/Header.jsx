@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -6,14 +7,14 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import ImageGallery2 from '../components/ImageGallery2'
 // import Portfolio from './portfolio';
 import CaseStudy from './CaseStudy';
-import { Link } from 'astro-link';
+import { Link } from 'react-scroll';
 
 
 
   const navigation = [
-    { name: 'Home', href: 'https://www.robertromulus.com' },
-    { name: 'Skills', href: 'https://www.robertromulus.com//#skills' },
-    { name: 'Projects', href: 'https://www.robertromulus.com//#projects' },
+    { name: 'Home', href: '/' },
+    { name: 'Skills', href: '/#skills' },
+    { name: 'Projects', href: '/#projects' },
     { name: 'Contact', href: 'https://calendly.com/robertromulus' },
   ];
 
@@ -233,13 +234,13 @@ const  Header = ()  => {
  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Smooth scroll handler
-  const handleScroll = (e, href) => {
-    e.preventDefault();
-    const section = document.querySelector(href);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // const handleScroll = (e, href) => {
+  //   e.preventDefault();
+  //   const section = document.querySelector(href);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   return (
     <div className="bg-white">
@@ -269,15 +270,37 @@ const  Header = ()  => {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-              <a key={item.name}
-                href={item.href}
-                onClick={(e) => handleScroll(e, item.href)}
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))}
+       {navigation.map((item) => {
+  // Check if the link is internal (starts with '/#')
+  if (item.href.startsWith('/#')) {
+    // Use react-scroll's Link for internal links
+    return (
+      <Link
+        key={item.name}
+        to={item.href.replace('/#', '')}
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        className="text-sm font-semibold leading-6 text-gray-900"
+      >
+        {item.name}
+      </Link>
+    );
+  } else {
+    // Use a regular <a> tag for external links
+    return (
+      <a
+        key={item.name}
+        href={item.href}
+        className="text-sm font-semibold leading-6 text-gray-900"
+      >
+        {item.name}
+      </a>
+    );
+  }
+})}
+
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
