@@ -180,7 +180,7 @@ const data = [
       id: 2,
       title: "RentLion",
       description: "Revolutionizing Property Management in the Real Estate Industry.",
-      imageUrl: "https://via.placeholder.com/300/db7093/fff.png",
+      imageUrl: "https://res.cloudinary.com/drtvuaee5/image/upload/v1705370770/h8qbwpfv1rekc3n8mog4.jpg",
       caseStudyUrl: "/pdf"
     },
     {
