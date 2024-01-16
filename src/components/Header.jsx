@@ -187,7 +187,7 @@ const data = [
       id: 3,
       title: "PDF Master - Side Project",
       description: "A prototype that leverages Python and the ChatGPT API to demonstrate conversational AI capabilities, allowing users to ask questions and receive informative responses through an intuitive interface.",
-      imageUrl: "https://github.com/uirobert/portfolio/blob/efb66fce8b335925c26d32615a29918e4c3f530e/public/pdfimage.png",
+      imageUrl: "https://res.cloudinary.com/drtvuaee5/image/upload/v1705370472/pdfimage_ctmboe.png",
       caseStudyUrl: "/pdf"
     },
     // {
@@ -422,7 +422,7 @@ const  Header = ()  => {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt- p-5">A bit about me</h2>
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-              <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
+              <div className="mt-10 p-5 max-w-xl text-base leading-7 text-gray-700">
                 My expertise spans a spectrum of crucial domains, making me a versatile and strategic Product Manager. 
                 In the realm of AI integration, I excel in harnessing AI's transformative power, seamlessly incorporating supervised and
                  unsupervised machine learning, deep learning, and natural language processing into my work. 
