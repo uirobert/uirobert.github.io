@@ -11,9 +11,9 @@ import { Link } from 'astro-link';
 
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Skills', href: '/#skills' },
-    { name: 'Projects', href: '/#projects' },
+    { name: 'Home', href: 'https://www.robertromulus.com' },
+    { name: 'Skills', href: 'https://www.robertromulus.com//#skills' },
+    { name: 'Projects', href: 'https://www.robertromulus.com//#projects' },
     { name: 'Contact', href: 'https://calendly.com/robertromulus' },
   ];
 
