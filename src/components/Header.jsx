@@ -6,25 +6,18 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import ImageGallery2 from '../components/ImageGallery2'
 // import Portfolio from './portfolio';
 import CaseStudy from './CaseStudy';
+import { Link } from 'astro-link';
 
-function navigateToRoot() {
-  window.location.href = '/';
+
+const Navigation = () => {
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Skills', href: '/#skills' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Contact', href: 'https://calendly.com/robertromulus' },
+  ];
+
 }
-
-function navigateToSkills() {
-  window.location.href = '/#skills';
-}
-
-function navigateToProjects() {
-  window.location.href = '/#projects';
-}
-
-const navigation = [
-  { name: 'Home', text: 'Back to Main Site', onclick: navigateToRoot },
-  { name: 'Skills', onclick: navigateToSkills },
-  { name: 'Projects', onclick: navigateToProjects },
-  { name: 'Contact', onclick: () => openExternalLink('https://calendly.com/robertromulus') },
-];
 
   
   
@@ -276,15 +269,14 @@ const  Header = ()  => {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-              <a
-                key={item.name}
+          {Navigation.map((item) => (
+              <Link key={item.name}
                 href={item.href}
                 onClick={(e) => handleScroll(e, item.href)}
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
