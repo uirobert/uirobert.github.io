@@ -20,7 +20,7 @@ const navigation = [
 const stats = [
   { label: ' Startup and Large Organization Experience', value: 'Product Manager & Engineer' },
   { label: 'Highest Software Revenue', value: '$800,000,000 Monthly ' },
-  { label: 'Largest App total userbase', value: '5.5 million customers' },
+  { label: 'Largest App userbase total', value: '5.5 million customers' },
 ]
 const values = [
   {
@@ -385,9 +385,12 @@ const  Header = ()  => {
                   </h1>
                   <p className="relative mt-2 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
                   
-                  Hi, I'm Robert Romulus, and welcome to my webspace. Step into my world of UX, product management, and AI. Explore my portfolio to see how I've harnessed AI, innovation, and product sense to drive product success. 
-                  Let's dive into the dynamic intersection of technology and user-centric design. I am a product manager with a passion for AI 
-                  and a knack for innovation. I'm a hands-on product manager with a background in UI development and a penchant for AI integration.
+My diverse skill set uniquely positions me to understand and appreciate technical 
+feasibility, strategic planning, documentation, engineering, data analytics, UX design,
+ and AI in the tech world. With a background in engineering, I craft visionary yet practical 
+ strategies and roadmaps, ensuring alignment with both technical feasibility and strategic goals. My expertise in AI, including open-source ML and ML operations, makes me a true
+ AI product manager, driving innovation and success in this dynamic field.
+
                   </p>
                 </div>
                 <div className="mt-8 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -417,15 +420,15 @@ const  Header = ()  => {
         {/* Content section */}
     <section id="about">
 
-        <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
+        <div className="mx-auto mt-8 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt- p-5">A bit about me</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-10 p-5">A bit about me</h2>
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-              <div className="mt-10 p-5 max-w-xl text-base leading-7 text-gray-700">
+              <div className="mt-10 max-w-xl text-base leading-7 text-gray-700 p-5">
                 My expertise spans a spectrum of crucial domains, making me a versatile and strategic Product Manager. 
                 In the realm of AI integration, I excel in harnessing AI's transformative power, seamlessly incorporating supervised and
-                 unsupervised machine learning, deep learning, and natural language processing into my work. 
+                unsupervised machine learning, deep learning, and natural language processing into my work. 
                  
                 </div>
 
@@ -433,7 +436,7 @@ const  Header = ()  => {
                   <p>
                   My extensive background in UI product management bridges the gap between technology and user experience,
                   ensuring that product success is a consistent outcome. I'm not only a hands-on Product Manager but also a
-                   seasoned developer who can transition seamlessly from Figma design to code implementation. 
+                  seasoned developer who can transition seamlessly from Figma design to code implementation. 
                   </p>
                   <p className="mt-10">
                   My ability to roadmap 
