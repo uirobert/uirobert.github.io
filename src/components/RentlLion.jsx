@@ -15,7 +15,7 @@ export default function Rentlion() {
     <div className="mx-auto max-w-2xl text-center">
       <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">RentLion</h2>
       <p className="mt-6 text-lg leading-8 text-gray-300">
-TEST      </p>
+Rent-Lion revolutionized property management in the real estate industry by offering a user-centric platform that streamlined processes for landlords, tenants, and applicants.   </p>
     </div>
   </div>
 
@@ -27,14 +27,17 @@ TEST      </p>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900">Project Overview</h2>
           <div className="mt-4 text-lg leading-8 space-y-6">
             <p>
-            The deployment of MLBPA app version 3.0 aimed to enhance the whole user experience while ensuring seamless access to critical information. The project focused on
-             minimizing downtime during the upgrade, maintaining functionality of existing APIs, and ensuring a smooth transition for users. This project also focused on enhancing the digital platform for the Major League Baseball Players Association, serving both Major and Minor League players. As the Product Manager, my objective was to
-            ensure the app's upgrade aligned with the union's broad representation goals.
+           Rent-Lion faced the challenge of creating a unified web, iOS, 
+           and Android experience that would enable rental prospects to seamlessly apply for 
+           housing and facilitate monthly rent payments once they become tenants. The complexity 
+           increased due to the necessity of incorporating third-party credit checking services.
+
+
             </p>
             <p>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Role</h2>
-            As the Product Manager, my responsibility was to oversee the app's development and deployment, aligning it with the MLBPA's mission and ensuring that the app effectively served the
-             needs of its diverse member base.
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 p-2">Role</h2>
+            As the Product Manager for the Rent-Lion project, I spearheaded a Google Design Sprint to facilitate the discovery of optimal user experience (UX) and user interface (UI) solutions. This sprint, rooted in Google's renowned design thinking framework, allowed our cross-functional team to converge on innovative ideas, rapidly prototype solutions, and validate them with users, all within a condensed timeframe. Through divergent thinking exercises, we explored various design concepts, and then, by converging our ideas, we refined and selected the most promising solutions. Our focus on understanding user pain points and iterating on design concepts during the sprint yielded valuable insights, enabling us to align the product's UX and UI with user needs effectively. The Google Design Sprint served as a pivotal catalyst in our journey to create an intuitive and user-centric property management solution.
+
             </p>
             <p>
               {/* Timeline:  Months (June 2023 - August 2023) */}
@@ -56,8 +59,7 @@ TEST      </p>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900">Problem</h2>
           <div className="mt-4 text-lg leading-8 space-y-6">
             <p>
-            The primary challenge was upgrading the app to a more efficient version without disrupting access to critical union information. It was essential to maintain uninterrupted service, ensure compatibility of existing functionalities, and handle
-              the transition of a diverse user base to the new version without any loss of data or functionality.
+            The core problem Rent-Lion addressed was the complexity and time-consuming nature of property management, which involved tasks such as rent collection, applicant screening, maintenance communication, and lease management. The app aimed to simplify these processes and provide a unified platform for landlords, tenants, and applicants.
             </p>
             <p>
               {/* Impact: This issue led to decreased conversion rates and overall revenue. */}
@@ -76,11 +78,8 @@ TEST      </p>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900">  Spefific Challenges</h2>
               <div className="mt-4 text-lg leading-8 space-y-6">
 
-<bold>Minimizing Downtime: Developed a detailed deployment plan to ensure minimal disruption to existing services.</bold>
-API Functionality: Ensured compatibility and proper functioning of both v1 and v2 APIs during and after the upgrade.
-User Transition Management: Implemented a comprehensive communication strategy to inform users about the new app version and its benefits.
-Risk Mitigation:
-Identified potential risks such as data loss, functionality issues, and user resistance. Developed contingency plans including rigorous testing, backup strategies, and user feedback channels to address these risks.
+<bold>Designing an intuitive and user-friendly interface that catered to the diverse needs of landlords and tenants came with challenges .</bold>
+Rent-Lion faced multiple challenges, including integrating third-party credit checks securely, designing a user-friendly interface for diverse user needs, implementing real-time communication, ensuring data security and compliance, standing out in a competitive market, addressing technical considerations for data management and synchronization, driving user adoption, and planning for scalability as the user base expanded.
 </div>
 
 <div className="mt-16">
@@ -88,32 +87,24 @@ Identified potential risks such as data loss, functionality issues, and user res
           <div className="mt-4 text-lg leading-8 space-y-6">
             <p>
 
-            The solution entailed a multi-faceted approach. First, we developed
-             a comprehensive deployment strategy minimizing downtime. We maintained 
-             parallel operability of both v1 and v2 APIs to ensure continuous service. A robust communication plan was implemented to guide users through the transition, supplemented by extensive support and feedback mechanisms. Additionally,
-             we established a phased rollout to monitor and address any issues promptly
+           Rent-Lion's solution was a comprehensive property management platform that successfully streamlined complex processes for landlords, tenants, and applicants. It featured a user-friendly interface that catered to diverse user needs, facilitated seamless real-time communication for maintenance requests and notifications, ensured robust data security and compliance with regulations, and effectively differentiated itself in the competitive real estate market. The platform efficiently managed data, offered offline support for native apps, and encouraged user adoption by simplifying workflows. As the user base grew, Rent-Lion remained scalable to meet increasing demands while maintaining optimal performance, ultimately revolutionizing property management in the real estate industry.
 
 <center>
 
-             <h1 className=' -mr-10 p-2'>   View MLBP App in the app store:   </h1>
+             <h1 className=' -mr-10 p-2'>   RentLion UX/UI Flow   </h1>
 
-             <a className='font-bold text-cyan-500' href='https://apps.apple.com/us/app/mlbpa/id824716651'>MLBA App</a>
+             <video className="h-full w-full rounded-lg" controls>
+      <source src="https://res.cloudinary.com/drtvuaee5/video/upload/v1705480801/Rentlion-flow_fpidag.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+          
            </center>
+<p className='p-2'>
 
-<ul>
-  <li>Engagement: A 40% increase in daily active users, showing deeper engagement.</li>
-  - Operational Excellence: 99.9% uptime during deployment, demonstrating technical and planning expertise.
- -  Member Satisfaction: A 30% increase in positive feedback, indicating improved alignment with member needs.
- </ul>
-The Epilogue - Looking Forward (When & Why):
-The journey continues, with the future of the app focused on evolving based on analytics and member feedback. The MLBPA App Version 3.0 is set to remain a vital part of the union's digital strategy.
-            </p>
-            <p>
-The deployment was successful with minimal downtime and high user satisfaction. The new app version was well-received, marked by an increase in user engagement and positive feedback.
+  My role as a Product Manager in the Rent-Lion team was a journey filled with challenges and triumphs, where the focus remained steadfast on creating a transformative property management solution. Together with our dedicated cross-functional team, we addressed complex issues, integrated third-party services seamlessly, and meticulously designed a user-centric interface. The implementation of real-time communication features, stringent data security measures, and compliance with regulations reflected our unwavering commitment to excellence. In a fiercely competitive real estate landscape, we carved out a niche by offering unique value to both landlords and tenants. Our careful consideration of technical aspects, including data management and scalability, ensured that Rent-Lion not only met but exceeded user expectations. Convincing stakeholders to embrace a new way of managing properties was a challenge we embraced, and today, Rent-Lion stands as a testament to our collective dedication. As we look back on this journey, we can proudly say that Rent-Lion has revolutionized property management, providing a seamless and user-friendly experience to all stakeholders. This accomplishment wouldn't have been possible without the collaborative spirit, resilience, and innovation that our team brought to the table, and I'm immensely proud to have been part of this transformative endeavor.
+</p>
 
-Lessons Learned and Future Steps:
-The experience highlighted the importance of thorough planning, risk assessment, and stakeholder communication in app deployment. Future steps include continuous monitoring, user feedback evaluation, and iterative improvements based on data-driven insights.
-       
             </p>
           </div>
         </div>

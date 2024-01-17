@@ -18,7 +18,7 @@ export default function PDFTALK() {
     <div className="mx-auto max-w-2xl text-center">
       <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">PDF Master- A Side Project</h2>
       <p className="mt-6 text-lg leading-8 text-gray-300">
-    he POC will harness the capabilities of Python and the ChatGPT API, offering a unique opportunity to gain hands-on experience in technical development while simultaneously crafting an intuitive user interface. 
+    The POC will harness the capabilities of Python and the ChatGPT API, offering a unique opportunity to gain hands-on experience in technical development while simultaneously crafting an intuitive user interface. 
       </p>
     </div>
   </div>

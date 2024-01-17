@@ -9,10 +9,10 @@ import { Link } from 'react-scroll';
 
 
 const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Skills', href: '/#skills' },
-    { name: 'Projects', href: '/#projects' },
-    { name: 'Contact', href: 'https://calendly.com/robertromulus' },
+    // { name: 'Home', href: '/' },
+    // { name: 'Skills', href: '/#skills' },
+    // { name: 'Projects', href: '/#projects' },
+    // { name: 'Contact', href: 'https://calendly.com/robertromulus' },
   ];
   
   const items = [
