@@ -15,8 +15,7 @@ export default function Rentlion() {
     <div className="mx-auto max-w-2xl text-center">
       <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">RentLion</h2>
       <p className="mt-6 text-lg leading-8 text-gray-300">
-      MLBPA App- The App that MLB players use to check on their benefits, contracts, and even dispute previous plays.
-      </p>
+TEST      </p>
     </div>
   </div>
 

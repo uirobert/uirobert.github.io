@@ -3,6 +3,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Gallery from './Gallery'
 import { Player } from '@lottiefiles/react-lottie-player';
+import { Link } from 'react-scroll';
 
 
 
@@ -232,7 +233,7 @@ const data = [
     return (
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8" style={{ maxWidth: '1360px' }}>
         {data.map((item) => (
-          <div key={item.id} className="flex flex-wrap mb-8 shadow overflow-hidden sm:rounded-lg" style={{ height: '610px' }}>
+          <div Link key={item.id} className="flex flex-wrap mb-8 shadow overflow-hidden sm:rounded-lg" style={{ height: '610px' }}>
             <div className="w-full lg:w-1/2">
               <img src={item.imageUrl} alt={item.title} className="h-full w-full object-cover" />
             </div>
@@ -274,7 +275,7 @@ const  Header2 = ()  => {
               <span className="sr-only">Your Company</span>
               <img
         className="inline-block h-20 w-20 rounded-full"
-        // src="/profile.jpeg"
+        src="/profile.jpeg"
         alt=""
       />
             </a>
@@ -286,20 +287,40 @@ const  Header2 = ()  => {
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              {/* <Bars3Icon className="h-6 w-6" aria-hidden="true" /> */}
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => handleScroll(e, item.href)}
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))}
+              {navigation.map((item) => {
+  // Check if the link is internal (starts with '/#')
+  if (item.href.startsWith('/#')) {
+    // Use react-scroll's Link for internal links
+    return (
+      <Link
+        key={item.name}
+        to={item.href.replace('/#', '')}
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+      >
+        {item.name}
+      </Link>
+    );
+  } else {
+    // Use a regular <a> tag for external links
+    return (
+      <a
+        key={item.name}
+        href={item.href}
+        className="text-sm font-semibold leading-6 text-gray-900"
+      >
+        {item.name}
+      </a>
+    );
+  }
+})}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -331,15 +352,36 @@ const  Header2 = ()  => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
+                    {navigation.map((item) => {
+  // Check if the link is internal (starts with '/#')
+  if (item.href.startsWith('/#')) {
+    // Use react-scroll's Link for internal links
+    return (
+      <Link
+        key={item.name}
+        to={item.href.replace('/#', '')}
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+      >
+        {item.name}
+      </Link>
+    );
+  } else {
+    // Use a regular <a> tag for external links
+    return (
+      <a
+        key={item.name}
+        href={item.href}
+        className="text-sm font-semibold leading-6 text-gray-900"
+      >
+        {item.name}
+      </a>
+    );
+  }
+})}
                 </div>
                 <div className="py-6">
                   <a

@@ -1,4 +1,4 @@
-import { Link } from 'react-scroll';
+
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -7,7 +7,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import ImageGallery2 from '../components/ImageGallery2'
 // import Portfolio from './portfolio';
 import CaseStudy from './CaseStudy';
-
+import { Link } from 'react-scroll';
 
 
 
@@ -186,7 +186,7 @@ const data = [
       title: "RentLion",
       description: "Revolutionizing Property Management in the Real Estate Industry.",
       imageUrl: "https://res.cloudinary.com/drtvuaee5/image/upload/v1705370770/h8qbwpfv1rekc3n8mog4.jpg",
-      caseStudyUrl: "/pdf"
+      caseStudyUrl: "/rentlion"
     },
     {
       id: 3,
@@ -234,13 +234,13 @@ const  Header = ()  => {
  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Smooth scroll handler
-  // const handleScroll = (e, href) => {
-  //   e.preventDefault();
-  //   const section = document.querySelector(href);
-  //   if (section) {
-  //     section.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
+  const handleScroll = (e, href) => {
+    e.preventDefault();
+    const section = document.querySelector(href);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="bg-white">
@@ -249,7 +249,7 @@ const  Header = ()  => {
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Robert Romulus</span>
           <a href="/">
               <img
         className="inline-block h-20 w-20 rounded-full bg-white"
@@ -266,13 +266,13 @@ const  Header = ()  => {
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              {/* <Bars3Icon className="h-6 w-6" aria-hidden="true" /> */}
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
        {navigation.map((item) => {
   // Check if the link is internal (starts with '/#')
-  if (item.href.startsWith('/#')) {
+  if (item.href.startsWith('/#') || item.href.startsWith('/')){
     // Use react-scroll's Link for internal links
     return (
       <Link
@@ -282,7 +282,7 @@ const  Header = ()  => {
         smooth={true}
         offset={-70}
         duration={500}
-        className="text-sm font-semibold leading-6 text-gray-900"
+        className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
       >
         {item.name}
       </Link>
@@ -313,13 +313,13 @@ const  Header = ()  => {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">Robert Romulus</span>
               <a href="/"> 
-                <img
+                {/* <img
         className="inline-block h-14 w-14 rounded-full"
-        // src="/profile.jpeg"
+        src=""
         alt="profile"
-      />
+      /> */}
              </a> 
               </a>
               <button
@@ -335,22 +335,22 @@ const  Header = ()  => {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
+                  <Link
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                
-                  </a>
+                  </Link>
                 </div>
 
 

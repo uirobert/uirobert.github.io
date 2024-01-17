@@ -4,6 +4,9 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Gallery from './Gallery'
 import { Player } from '@lottiefiles/react-lottie-player';
 import PDFTALK from './PDFTALK';
+import { Link } from 'react-scroll';
+import Rentlion from './RentlLion';
+
 
 
 
@@ -278,7 +281,7 @@ const  Header4 = ()  => {
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              {/* <Bars3Icon className="h-6 w-6" aria-hidden="true" /> */}
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
@@ -376,7 +379,7 @@ const  Header4 = ()  => {
    
     {/* <MainSection/>
     <CaseStudies data={data} /> */}
-  <PDFTALK/>
+<Rentlion/>
 
 
       </div>
