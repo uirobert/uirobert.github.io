@@ -7,7 +7,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import ImageGallery2 from '../components/ImageGallery2'
 // import Portfolio from './portfolio';
 import CaseStudy from './CaseStudy';
-import { Link } from 'react-scroll';
+
 
 
 
