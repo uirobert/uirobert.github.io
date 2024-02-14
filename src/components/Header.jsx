@@ -407,12 +407,14 @@ const  Header = ()  => {
               <div className="mx-auto max-w-2xl gap-x-10 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl p-10" >
-                  Unlocking Innovation at the Intersection of AI and Product Management
+                 Fintech, Blockchain, and AI expertise as an Engineer and Product Manager.
                   </h1>
                   <p className="relative mt-2 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
                   
-My diverse skill set uniquely positions me to truly understand and appreciate technical feasibility, strategic planning, documentation, engineering, data analytics, UX design, and AI in the tech world. With a background in engineering, I craft visionary yet practical strategies and roadmaps, ensuring alignment with technical feasibility and strategic goals. My expertise in AI, including open-source ML and ML operations, makes me an exceptional AI product manager, driving innovation and success in this dynamic field.
-
+                    Experienced in coding and product management, I specialize in crafting intricate specs, designing UIs, 
+                    leading agile teams, fostering collaboration, and ensuring outstanding user experiences.
+                    Utilizing tools like React, NextJS, Astro, FastAPI, Postgres, and Django, I prioritize meticulous planning and documentation. Furthermore, my expertise in Agile, stakeholder management,
+                    roadmapping, data models, and PRDs fuels innovations in blockchain and AI.
                   </p>
                 </div>
                 <div className="mt-8 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
